@@ -1,0 +1,50 @@
+.slideshow-container{
+    background: rgb(230,221,224);
+    background: radial-gradient(circle, rgb(253, 253, 253) 0%, rgb(233, 203, 216) 100%);
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide{
+    display: none;
+}
+
+.slide picture img{    
+    width: 100%;
+    aspect-ratio: 1.5;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    color: rgba(240, 240, 240, 0.5);
+    font-weight: 700;
+    font-size: 18;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    top: 25vw;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover{
+    transform: scale(1.5);
+    color: rgba(240, 240, 240, 1);
+}
+
+/* Fading Animation */
+.fade{
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1}
+}
