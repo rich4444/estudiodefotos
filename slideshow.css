@@ -56,7 +56,7 @@
     }
 
     .slide picture img{   
-        transform: translate(0,-15%);
+        transform: translate(0,-10%);
     }        
     
     .prev, .next {
