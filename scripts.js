@@ -49,63 +49,17 @@ function closeNavBar (){
     openButton.style.display = "block";
 }
 
-//Handle logos
+//Handle logos and back button
 const logoSmall = document.getElementById("logo-small");
+const backBtn = document.getElementById("backBtn");
 
 window.onscroll = function() {
     var scrollLimit = 100;
     if (window.scrollY >= scrollLimit) {
       logoSmall.style.opacity = 1;
+      backBtn.style.display = "block";
     } else {
         logoSmall.style.opacity = 0;
+        backBtn.style.display = "none";
     }
   };
-
-
-//Modals
-const closeModal = document.querySelectorAll(".close");
-const modals = document.querySelectorAll(".modal");
-const loquieroButton = document.querySelectorAll(".loquiero");
-
-document.getElementById("openNewborn").addEventListener("click", () => {
-        openModal("modal-newBorn");
-  });
-  
-document.getElementById("openMaternity").addEventListener("click", () => {
-    openModal("modal-maternity");
-});
-
-document.getElementById("openBaby").addEventListener("click", () => {
-    openModal("modal-baby");
-});
-
-document.getElementById("openPrecumple").addEventListener("click", () => {
-    openModal("modal-precumple");
-});
-
-closeModal.forEach(btn => {
-    btn.addEventListener("click", () =>{
-    closeAllModals();
-    })
-});
-
-loquieroButton.forEach(btn => {
-    btn.addEventListener("click", () => {
-        closeAllModals();
-        window.location.hash = "contacto";
-    })
-})
-
-function openModal (modal){
-    modals.forEach(m => {
-        if(m.getAttribute('id')==modal){
-            m.style.display = "block";
-        }
-    })
-}
-
-function closeAllModals (){
-    modals.forEach(m => {
-        m.style.display = "none";
-    })
-}

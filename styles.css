@@ -1,6 +1,6 @@
 :root{
     --main-color: #BBA14f;
-    --secondary-color: rgba(243, 227, 226, 0.95);
+    --secondary-color: #f3e3e2f2;
     --white-color: rgb(240, 240, 240);
 }
 
@@ -20,15 +20,17 @@ body{
     font-size: 18px;
 }
 
-.logo-large img{
-    color: red;
-    width: 100px;
+.logo-large{
     position: absolute;
+    background-color: rgba(240, 240, 240, .9);
+    padding: 10px;
     top: 10px;
     left: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    padding: 5px;
+}
+
+.logo-large img{
+    width: 60px;
     filter: invert(58%) sepia(54%) saturate(380%) hue-rotate(8deg) brightness(99%) contrast(93%);
 }
 
@@ -66,6 +68,7 @@ body{
     font-size: 2rem;
     cursor: pointer;
     margin: 0 10px;
+    color: var(--main-color);
 }
 
 .navbar ul{
@@ -129,6 +132,29 @@ hr{
     border: none;
 }
 
+#backBtn{
+    display: none;
+}
+
+.backToTop{
+    font-size: 2.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    color: var(--main-color);
+    box-shadow: 2px 2px 5px black;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.backToTop:active{
+    color: rgb(58, 57, 2);
+    background-color: rgb(202, 202, 202);
+    box-shadow: 1px 1px 3px black;
+}
+
 
 /* Sobre mi section */
 .about-photo{
@@ -137,7 +163,7 @@ hr{
 
 .about-photo img{
     margin: 40px 0;
-    width: 90%;
+    width: 80%;
 }
 
 #heroBack{
@@ -222,114 +248,6 @@ hr{
 .baby { background-image: url(./img/sesion-baby.jfif); }
 .cake { background-image: url(./img/sesion-cake.jfif); }
 
-
-/*Modals Section */
-.modal{
-    display: none;
-    z-index: 50;
-    position: fixed;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90vh;
-    width: 90vw;
-    background-color: rgba(240, 240, 240, 0.9);
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.modal-pictures{
-    position: relative;
-}
-
-.modal-pictures img{
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    height: 200px;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%);
-    box-shadow: 2px 2px 10px black;
-}
-
-.modal-pictures img:nth-child(1){
-    opacity: 0;
-    animation: mPhotos 15s linear infinite;
-}
-.modal-pictures img:nth-child(2){
-    opacity: 0;
-    animation: mPhotos 15s linear 5s infinite;
-}
-.modal-pictures img:nth-child(3){
-    opacity: 0;
-    animation: mPhotos 15s linear 10s infinite;
-}
-
-@keyframes mPhotos {
-    0% {opacity: 0;}
-    5% {opacity: 1;}
-    33% { opacity: 1;}
-    38% { opacity: 0;}
-    100% { opacity: 0;}
-}
-
-.modal h3{
-    font-family: "Nunito", sans-serif;
-}
-
-.modal ul{
-    margin-left: 20px;
-}
-
-.modal-botones{
-    width: 80%;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.modal-botones button{
-    width: 100%;
-}
-
-.precios .precioItem{
-    position: absolute;
-    width: 90%;
-    top: 250px;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: left;
-}
-
-.precios .precioItem:nth-child(1){
-    animation: mPhotos 12s linear infinite;
-}
-.precios .precioItem:nth-child(2){
-    opacity: 0;
-    animation: mPhotos 12s linear 4s infinite;
-}
-.precios .precioItem:nth-child(3){
-    opacity: 0;
-    animation: mPhotos 12s linear 8s infinite;
-}
-
-.modal .closeIcon{
-    position: absolute;
-    z-index: 100;
-    top: 5px;
-    right: 5px;
-    line-height: 0.5;
-    font-size: 2rem;
-    background-color: var(--main-color);
-    width: auto;
-    aspect-ratio: 1;
-    color: white;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-}
 /* Section Estudio */
 .gridContainer{
     margin-top: 50px;
@@ -404,7 +322,7 @@ hr{
     width: 40px;
     height: 40px;
     background-color: var(--main-color);
-    color: var(--secondary-color);
+    color: var(--white-color);
     vertical-align: -8px;
     border-radius: 50%;
     cursor: pointer;
@@ -420,7 +338,9 @@ hr{
     align-items: baseline;
     justify-content: center;
     margin: 5px 0;
-} .tel p{ margin-left: 10px; }
+}
+.tel p{ margin-left: 10px; }
+.datos a{ text-decoration: none; }
 
 form{
     width: 100%;
@@ -494,4 +414,32 @@ footer a{
 
 footer a:hover{
     text-decoration: underline;
+}
+
+/* Sesiones Pages */
+.precioItem{
+    text-align: left;
+    margin-top: 50px;
+}
+
+.precioItem h3{
+    font-family: "Nunito", sans-serif;
+}
+
+.precioItem ul{    
+    margin-left: 50px;
+}
+
+.botones{
+    margin-top: 50px;
+    width:100%;
+}
+
+.botones button{
+    width: 100%;
+}
+
+.prices{
+    background: rgb(255,255,255);
+    background: linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(243,227,224,1) 100%);
 }

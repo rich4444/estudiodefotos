@@ -36,20 +36,22 @@
       <div class="slideshow-container">
         <div class="slide fade">
           <picture>
-            <source media="(min-width:650px)" srcset="./img/splash1_big.jpg" />
-            <img src="./img/splash1_small.jpg" alt="Bebe bajo una manta" />
+            <img src="./img/newborn/newborn3.png" alt="Bebe bajo una manta" />
           </picture>
         </div>
         <div class="slide fade">
           <picture>
-            <source media="(min-width:650px)" srcset="./img/splash2_big.jpg" />
-            <img src="./img/splash2_small.jpg" alt="Bebe comiendo un pastel" />
+            <img src="./img/precumple/precumple2.png" alt="Bebe bajo una manta" />
           </picture>
         </div>
         <div class="slide fade">
           <picture>
-            <source media="(min-width:650px)" srcset="./img/splash3_big.jpg" />
-            <img src="./img/splash3_small.jpg" alt="Mujer Embarazada" />
+            <img src="./img/baby/baby2.png" alt="Bebe comiendo un pastel" />
+          </picture>
+        </div>
+        <div class="slide fade">
+          <picture>
+            <img src="./img/maternity/maternity2.png" alt="Mujer Embarazada" />
           </picture>
         </div>
 
@@ -68,7 +70,7 @@
         <div class="logo-small">
           <img id="logo-small" src="./img/logo-small.svg" alt="logo" />
         </div>
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <a href="https://wa.me/59898449088?text=Hola Dalma, quisiera saber mas sobre tus sesiones de foto" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
       </div>
       <ul id="navbarList" class="closedBar">
         <li><a class="navLink" href="#about">Sobre mi</a></li>
@@ -78,6 +80,8 @@
         <li><a class="navLink" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+
+    <a href="#" id="backBtn"><i class="fa fa-arrow-circle-up backToTop" aria-hidden="true"></i></a>
 
     <section class="section-about" id="about">
       <div class="about-photo">
@@ -104,208 +108,38 @@
 
     <section class="section-sesiones" id="sesiones">
       <h1>SESIONES</h1>
-      <div class="sesion-card newborn">
+      <div id="newborn" class="sesion-card newborn">
         <h2>NEWBORN</h2>
         <p>
           La fotografía de bebes es un tipo de fotografía artística, cargada de
           emociones.<br />
-          <button id="openNewborn">+Info</button>
+          <a href="./newborn.html"><button>+Info</button></a>
         </p>
       </div>
-      <div class="sesion-card maternity">
+      <div id="maternity" class="sesion-card maternity">
         <h2>MATERNITY</h2>
         <p>
           Se realizan a partir de la semana número 25, se realizan fotos
           familiares. Contamos con vestimenta, peinado y maquillaje.<br />
-          <button id="openMaternity">+Info</button>
+          <a href="./maternity.html"><button>+Info</button></a>
         </p>
       </div>
-      <div class="sesion-card baby">
+      <div id="baby" class="sesion-card baby">
         <h2>Baby</h2>
         <p>
           Esta sesión se realiza a partir de los tres meses del bebe, que es
           cuando empiezan a realizar diferentes tipos de gestos.<br />
-          <button id="openBaby">+Info</button>
+          <a href="./baby.html"><button>+Info</button></a>
         </p>
       </div>
-      <div class="sesion-card cake">
+      <div id="precumple" class="sesion-card cake">
         <h2>PRE-CUMPLE</h2>
         <p>
           Es una sesión que se hace para el cumpleaños. Ponemos una torta frente
           al bebe y fotografiamos lo que sucede ¡Son muy divertidos!<br />
-          <button id="openPrecumple">+Info</button>
+          <a href="./precumple.html"><button>+Info</button></a>
         </p>
       </div>
-
-      <!-- Modal Newborn -->
-      <div class="modal" id="modal-newBorn">
-          <span class="close closeIcon">&times;</span>
-          <div class="modal-pictures">
-            <img src="./img/newborn/newborn1.png" alt="New born baby">
-            <img src="./img/newborn/newborn2.png" alt="New born baby">
-            <img src="./img/newborn/newborn3.png" alt="New born baby">
-          </div>
-          <div class="precios">            
-            <div class="precioItem">
-              <h3>Opción A</h3>
-              <ul>
-                <li><p>15 Fotos formato Digital Gmail</p></li>
-                <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-                <li><p>Inversión: $2500</p></li>
-              </ul>
-            </div>      
-            <div class="precioItem">
-              <h3>Opción B</h3>
-              <ul>
-                <li><p>20 Fotos formato Digital Gmail</p></li>
-                <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-                <li><p>Un cuadro tamaño 30x45</p></li>
-                <li><p>Inversión: $3000</p></li>
-              </ul>
-            </div>      
-            <div class="precioItem">
-              <h3>Opción C</h3>
-              <ul>
-                <li><p>25 Fotos formato Digital Gmail</p></li>
-                <li><p>1 Sesión de seguimiento</p></li>
-                <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-                <li><p>Inversión: $3950</p></li>
-              </ul>
-            </div>
-          </div>
-          <div class="modal-botones">
-            <button class="loquiero">¡Lo quiero!</button>
-            <button class="close">Volver</button>
-          </div>
-      </div>
-
-      
-      <!-- Modal Maternity -->
-      <div class="modal" id="modal-maternity">
-        <span class="close closeIcon">&times;</span>
-        <div class="modal-pictures">
-          <img src="./img/maternity/maternity1.png" alt="Pregnant Woman">
-          <img src="./img/maternity/maternity2.png" alt="Pregnant Woman">
-          <img src="./img/maternity/maternity3.png" alt="Pregnant Woman">
-        </div>
-        <div class="precios">            
-          <div class="precioItem">
-            <h3>Opción A</h3>
-            <ul>
-              <li><p>15 Fotos formato Digital Gmail</p></li>
-              <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-              <li><p>Inversión: $1500</p></li>
-            </ul>
-          </div>      
-          <div class="precioItem">
-            <h3>Opción B</h3>
-            <ul>
-              <li><p>25 Fotos formato Digital Gmail</p></li>
-              <li><p>15 Fotos impresas en tamaño 13x18</p></li>
-              <li><p>Un cuadro tamaño 30x45</p></li>
-              <li><p>Inversión: $2800</p></li>
-            </ul>
-          </div>      
-          <div class="precioItem">
-            <h3>Opción C</h3>
-            <ul>
-              <li><p>Sesión maternal + sesión recién nacido</p></li>
-              <li><p>20 Fotos de cada sesión impresas</p></li>
-              <li><p>Un cuadro tamaño 30x45</p></li>
-              <li><p>Inversión: $3900</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="modal-botones">
-          <button class="loquiero">¡Lo quiero!</button>
-          <button class="close">Volver</button>
-        </div>
-    </div>
-
-  
-    <!-- Modal Baby -->
-    <div class="modal" id="modal-baby">
-      <span class="close closeIcon">&times;</span>
-      <div class="modal-pictures">
-        <img src="./img/baby/baby1.png" alt="A baby">
-        <img src="./img/baby/baby2.png" alt="A baby">
-        <img src="./img/baby/baby3.png" alt="A baby">
-      </div>
-      <div class="precios">            
-        <div class="precioItem">
-          <h3>Sesiones Baby</h3>
-          <ul>
-            <li><p>15 Fotos formato Digital Gmail</p></li>
-            <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-            <li><p>Inversión: $1800</p></li>
-          </ul>
-        </div>              
-        <div class="precioItem">
-          <h3>Sesiones Baby</h3>
-          <ul>
-            <li><p>15 Fotos formato Digital Gmail</p></li>
-            <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-            <li><p>Inversión: $1800</p></li>
-          </ul>
-        </div>            
-        <div class="precioItem">
-          <h3>Sesiones Baby</h3>
-          <ul>
-            <li><p>15 Fotos formato Digital Gmail</p></li>
-            <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-            <li><p>Inversión: $1800</p></li>
-          </ul>
-        </div>  
-      </div>
-      <div class="modal-botones">
-        <button class="loquiero">¡Lo quiero!</button>
-        <button class="close">Volver</button>
-      </div>
-  </div>
-
-
-      <!-- Modal precumple -->
-      <div class="modal" id="modal-precumple">
-        <span class="close closeIcon">&times;</span>
-        <div class="modal-pictures">
-          <img src="./img/precumple/precumple1.png" alt="1 year old baby">
-          <img src="./img/precumple/precumple2.png" alt="1 year old baby">
-          <img src="./img/precumple/precumple3.png" alt="1 year old baby">
-        </div>
-        <div class="precios">            
-          <div class="precioItem">
-            <h3>Opción A</h3>
-            <ul>
-              <li><p>20 Fotos formato Digital Gmail</p></li>
-              <li><p>Las mismas fotos impresas en tamaño 13x18</p></li>
-              <li><p>Torta de cumpleaños</p></li>
-              <li><p>Inversión: $2500</p></li>
-            </ul>
-          </div>      
-          <div class="precioItem">
-            <h3>Opción B</h3>
-            <ul>
-              <li><p>15 Fotos formato Digital Gmail</p></li>
-              <li><p>5 Fotos impresas en tamaño 13x18</p></li>
-              <li><p>Minibook con 10 fotos</p></li>
-              <li><p>Torta de cumpleaños</p></li>
-              <li><p>Inversión: $2800</p></li>
-            </ul>
-          </div>      
-          <div class="precioItem">
-            <h3>Opción C</h3>
-            <ul>
-              <li><p>15 Fotos formato Digital Gmail</p></li>
-              <li><p>Inversión: $1500</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="modal-botones">
-          <button class="loquiero">¡Lo quiero!</button>
-          <button class="close">Volver</button>
-        </div>
-    </div>
-
     </section>
 
     <section class="section-estudio" id="estudio">
@@ -374,18 +208,18 @@
         Espero verte pronto, <span>Dalma González</span>.
       </p>
       <div class="iconosContacto">
-        <i class="fa fa-instagram iconoContacto" aria-hidden="true"></i>
-        <i class="fa fa-facebook iconoContacto" aria-hidden="true"></i>
-        <i class="fa fa-whatsapp iconoContacto" aria-hidden="true"></i>
+        <a href="https://www.instagram.com/dalmagonzalezestudio/" target="_blank"><i class="fa fa-instagram iconoContacto" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/dalfotografia/" target="_blank"><i class="fa fa-facebook iconoContacto" aria-hidden="true"></i></a>
+        <a href="https://wa.me/59898449088?text=Hola Dalma, quisiera saber mas sobre tus sesiones de foto" target="_blank"><i class="fa fa-whatsapp iconoContacto" aria-hidden="true"></i></a>
       </div>
 
       <div class="info">
         <div class="datos">
-          <p>Vicente Gorostiaga, esq. Aurelio Casas</p>
+          <a href="https://www.google.com.uy/maps/@-34.7151277,-55.9666492,17.96z?hl=es-419" target="_blank"><p>Vicente Gorostiaga, esq. Aurelio Casas</p></a>
           <p>Pando, Canelones. Uruguay.</p>
           <div class="tel">
             <i class="fa fa-mobile" aria-hidden="true"></i>
-            <p>098 449 088</p>
+            <a href="tel:098449088"><p>098 449 088</p></a>
           </div>
         </div>
       </div>
@@ -393,11 +227,11 @@
       <form
         name="contactForm"
         id="contactForm"
-        action="https://formsubmit.co/rich4shioo@gmail.com"
+        action="https://formsubmit.co/dalma_24@icloud.com"
         method="POST"
         class="endForm"
+        target="_blank"
       >
-        <input type="hidden" name="_next" value="http://192.168.1.119:5500/" />
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_subject" value="Nuevo mensaje de la web!" />
         <input
@@ -416,8 +250,8 @@
         />
         <input type="tel" name="number" id="number" placeholder="Teléfono" />
         <textarea
-          name="texta"
-          id="texta"
+          name="textarea"
+          id="textarea"
           cols="30"
           rows="11"
           placeholder="Mensaje"
