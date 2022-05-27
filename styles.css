@@ -13,11 +13,11 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body{
     overflow-x: hidden;
-    font-size: 18px;
 }
 
 .logo-large{
@@ -94,9 +94,15 @@ body{
 
 
 section{
+    position: relative;
     padding: 80px 30px;
     width: 100%;
     text-align: center;
+}
+
+.section-anchor{
+    position: absolute;
+    top: -50px;
 }
 
 section:nth-of-type(odd){
@@ -249,6 +255,11 @@ hr{
 .cake { background-image: url(./img/sesion-cake.jfif); }
 
 /* Section Estudio */
+.estudio-text{
+    width: 80%;
+    margin: 50px auto;
+}
+
 .gridContainer{
     margin-top: 50px;
     width: 100%;
@@ -259,7 +270,10 @@ hr{
 }
 
 .gridItem img{
+    border-radius: 5px;
     width: 100%;
+    box-shadow: 0 0 0 0 black;
+    transition: all 0.2s;
 }
 
 
@@ -280,24 +294,30 @@ hr{
     background-color: var(--white-color);
     border-radius: 10px;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, .2);
-    padding: 20px;
+    padding: 40px 30px;
     text-align: center;
     color: var(--main-color);
 }
 
-.opiniones-cards h2{
-    font-size: 1.8rem;
-    font-family: "Nunito", sans-serif;
-}
-.opiniones-cards h3{
-    margin-top: -5px;
-    font-size: 1.2rem;
-    font-family: "Nunito", sans-serif;
+.estrellas{
+    text-align: left;
+    margin-bottom: 20px;
+    word-spacing: 10px;
 }
 
-.opiniones-cards p{
-    margin-top: 15px;
+.opiniones-cards figcaption{
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+    text-align: right;
+}
+
+.opiniones-cards blockquote {
+    color: black;
+    text-align: left;
     font-size: 1.2rem;
+}
+.opiniones-cards em{
     font-family: "Nunito", sans-serif;
 }
 
@@ -339,7 +359,10 @@ hr{
     justify-content: center;
     margin: 5px 0;
 }
-.tel p{ margin-left: 10px; }
+.tel p{ 
+    margin-left: 10px;
+    width: 100%; 
+}
 .datos a{ text-decoration: none; }
 
 form{
@@ -442,4 +465,244 @@ footer a:hover{
 .prices{
     background: rgb(255,255,255);
     background: linear-gradient(135deg, rgba(240,240,240,1) 0%, rgba(243,227,224,1) 100%);
+}
+
+@media screen and (min-width: 850px) {
+    html{ font-size: 12px; }
+
+    section{ padding: 60px 80px 80px 80px; }
+
+    .section-anchor{ top: -40px; }
+
+    p, span{ font-size: 1.3rem; }
+
+    hr{ margin: 25px 0px; }
+
+    h1{ font-size: 2.4rem; }
+    
+    .logo-large img{ width: 120px; }
+
+    .logo-small img{ display: none; }
+
+    /* Navbar */
+    .navbar{
+        min-height: 10px;
+        height: 40px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-buttons{ width: 60px; }
+
+    .navbar ul{
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items:flex-end;
+    }
+    
+    .navbar ul li {
+        margin-right: 20px;
+        padding: 15px;
+    }
+
+    .navbar ul li:hover{
+        text-decoration: underline;
+    }
+
+    #navbarList{
+        display: flex !important;
+    }
+    
+    #openNavbar{ width: 30px; display: none !important; }
+    #closeNavbar{ width: 30px; display: none !important; }
+    
+    /* About */
+    .section-about{
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-photo img{
+        margin: 0;
+        padding: 0;
+        height: 70vh;
+        width: auto;
+    }
+
+    .about-text{
+        width: 500px;
+        margin-left: 50px;
+    }
+
+
+    /* Sesiones */
+    .sections-container{
+        margin: 50px 10px 50px 10px;
+        display: grid;
+        justify-content: center;
+        gap:  50px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sesion-card{
+        width: 100%;
+        min-height: 400px;
+        margin: 0;
+    }
+    .sesion-card p{
+        padding: 20px 50px;
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+    .sesion-card button{
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    
+    /* Section Estudio */
+    .estudio-text{
+        width: 60%;
+    }
+    .estudio-text p{        
+        font-size: 1.4rem;
+    }
+    .gridContainer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gridItem img:hover{
+        transform: scale(1.2);
+        box-shadow: 0 0 20px -5px black;
+    }
+
+
+    /* Section Opiniones */
+    .gridContainerOpiniones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+    }
+
+    .opiniones-cards{
+        padding: 30px 30px 20px 30px;
+    }
+
+    /* Section Contacto */
+    .contacto-container{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .info-container{
+        text-align: left;
+        width: 50%;
+    }
+
+    .info-container p{
+        font-size: 1.4rem;
+        width: 90%;
+        line-height: 1.5;
+    }
+
+    .form-container{
+        display: flex;
+        width: 40%;
+    }
+
+    form{
+        margin: 0;
+    }
+
+    .datos{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .tel{
+        justify-content: start;
+    }
+    
+    .tel p{ width: 100%; }
+    
+    .iconoContacto{
+        text-align: center;
+        font-size: 2rem;
+        margin-right: 40px;
+    }
+
+    .iconosContacto{
+        justify-content: start;
+    }
+
+    /* Sesiones Pages */
+    .precioItem{
+        text-align: left;
+        margin-top: 50px;   
+        font-size: 1.5rem;
+    }
+
+    .precioItem h3{
+        font-size: 1.8rem;
+    }
+
+    .precioItem ul li p, span{        
+        font-size: 1.6rem;
+    }
+    .botones button{
+        padding: 8px;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    section{
+        padding: 60px 120px 80px 120px;
+    }    
+    
+    .botones{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+    }
+    
+    .sections-container{
+        margin: 50px 80px 50px 80px;
+    }
+    .sesion-card{
+        min-height: 500px;
+    }
+    .sesion-card p{
+        font-size: 1.5rem;
+    }
+
+    /* Estudio */ 
+    .gridContainer{
+        width: 80%;
+        display: flex;
+        margin: 20px auto;
+        flex-direction: row;
+    }
+    
+    .gridItem img:hover{
+        transform: scale(1.5);
+    }
+
+
+    
+
+    /* Section Opiniones */
+    .gridContainerOpiniones{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

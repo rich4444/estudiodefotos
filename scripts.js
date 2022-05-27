@@ -29,7 +29,8 @@ const navLinks = document.querySelectorAll(".navLink");
 
 navLinks.forEach(link => {
     link.addEventListener("click", () =>{
-        closeNavBar();
+        if(window.screen.width < 850)
+            closeNavBar();
     })
 });
 
